@@ -1,24 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import { Admin, Resource } from 'react-admin';
+import jsonServerProvider from 'ra-data-json-server';
+import {  Add, Update, UserList,View } from './Resources/User';
+import UserIcon from '@material-ui/icons/Group'
+
+const dataProvider = jsonServerProvider('https://jsonplaceholder.typicode.com');
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <Admin dataProvider={dataProvider}>
+      <Resource name="users" list={UserList} create={Add} edit={Update} show={View} icon={UserIcon}/>
+  </Admin>
   );
 }
 
