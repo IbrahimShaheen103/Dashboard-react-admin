@@ -1,5 +1,1 @@
-import CommentsList from './CommentsList'
-
-export default {
-    list :CommentsList
-}
+export {default as CommentList} from './CommentList'
