@@ -1,5 +1,1 @@
-import PostList from './PostList'
-
-export default {
-    list :PostList
-}
+export {default as PostList} from './PostList'

@@ -1,5 +1,4 @@
-import Album from './Album'
 
-export default {
-    list :Album
-}
+
+export {default as Album} from './Album'
+    
