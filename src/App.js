@@ -1,7 +1,4 @@
-import Container from "./components/Container";
-
-
-
+import Container from "./Pages/Container";
 
 function App() {
 
